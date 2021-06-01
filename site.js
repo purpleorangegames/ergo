@@ -1,4 +1,5 @@
 
+let lastTimestamp=''
 start()
 
 function start() {
@@ -51,7 +52,6 @@ function nameException(name)
  return name
 }
 
-let lastTimestamp=''
 function valueException(table,name,value)
 {
  if (name==="timestamp") {
