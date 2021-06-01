@@ -18,7 +18,7 @@ function start() {
    let keys=Object.keys(tables[k].object[0]);
    table.push('<table><thead><tr>');
    for (i=0;i<keys.length;++i) {
-    '<th>'+nameException(table.push(keys[i]))+'</th>';
+    table.push('<th>'+nameException(keys[i])+'</th>');
    }
    table.push('</tr></thead><tbody>');
   
@@ -49,7 +49,6 @@ function nameException(name)
 function valueException(name,value)
 {
  if (name==="timestamp" || name==="lastBeat") {
-  console.log(name,value)
   value=moment(value*1000).format('DD/MM/YYYY HH:mm')
  }
  return value
