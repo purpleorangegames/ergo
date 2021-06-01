@@ -28,3 +28,8 @@ body {
     color: #ffffff;
     background-color: #38332e;
 }
+
+.tableDiv {
+    width: 100%;
+    table-layout: fixed;
+}
