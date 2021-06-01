@@ -86,6 +86,13 @@ function valueException(table,name,value)
     break;
    }
  }
+ else if (name==="ERGO") {
+   value=maximumCharacters(value,6);
+ }
+ else if (name==="REAIS") {
+   $.ajax({type: "GET",url: 'https://api.coingecko.com/api/v3/simple/price?ids=ergo&vs_currencies=brl',async:false,success: function (e) {
+    value=realFormatter.format(value * e.ergo.brl); } });
+ }
  else if (name==="participacao") {
   value=parseFloat((parseFloat(value)).toPrecision(6)).toFixed(1)+" %";
  }
