@@ -87,7 +87,7 @@ function valueException(table,name,value)
    }
  }
  else if (name==="participacao") {
-  parseFloat((value).toPrecision(1)).toFixed(1)+" %";
+  parseFloat((parseFloat(value)).toPrecision(1)).toFixed(1)+" %";
  }
  else if (name==="effort") {
   value=(value*100).toPrecision(2)+" %";
