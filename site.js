@@ -38,7 +38,7 @@ function start() {
 
 function valueException(name,value)
 {
- if (name==="timestamp") {
+ if (name==="timestamp" || name==="lastBeat") {
   console.log(name,value)
   value=moment(value*1000).format('DD/MM/YYYY HH:mm')
  }
