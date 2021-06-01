@@ -35,11 +35,9 @@ function start() {
     }
     lineTr=lineTr+('</tr>');
     
-    lineTr.replace('|BORDER|',((useBorder)?' class="topBorder"':''));
+    lineTr=lineTr.replace('|BORDER|',((useBorder)?' class="topBorder"':''));
     if (useBorder)
      useBorder=false;
-    
-    console.log(lineTr);
     
     table.push(lineTr);
     lineTr=''
