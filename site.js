@@ -40,6 +40,7 @@ function start() {
      useBorder=false;
     
     table.push(lineTr);
+    lineTr=''
    }
   
    table.push('</tbody></table>');
