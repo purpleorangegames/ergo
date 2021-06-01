@@ -57,8 +57,9 @@ function styleException(name) {
 function nameException(name)
 {
  if (name==="hr") return 'Hashrate Médio';
- if (name==="timestamp") return 'Data Hora';
- if (name==="worker") return 'Minerador';
+ else if (name==="timestamp") return 'Data Hora';
+ else if (name==="worker") return 'Minerador';
+ else if (name==="effort") return 'Esforço';
  return name
 }
 
@@ -70,7 +71,10 @@ function valueException(table,name,value)
    if (value===WorkerOwner[i].worker)
     value='<span class="'+WorkerOwner[i].owner+'">'+WorkerOwner[i].owner+' - '+WorkerOwner[i].worker+'</span>';
  }
- if (name==="timestamp") {
+ else if (name==="effort") {
+  value=(value*100).toPrecision(2)+" %";
+ }
+ else if (name==="timestamp") {
   value=moment(value*1000).format('DD/MM/YYYY HH:mm')
   if (table==="Workers") {
    if (value!==lastTimestamp) {
