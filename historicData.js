@@ -8,7 +8,7 @@ MatureBlocks = [
 
 NextBlockShare = [ 
 
-{'owner': 'Mario','mediaDesdeUltimoBloco': '1656537381.3403816','participacao': '62.568425021560245','ERGO': '41.85358370754719','REAIS': '41.85358370754719'},{'owner': 'Tweenky','mediaDesdeUltimoBloco': '594397179.9690909','participacao': '22.450743223090054','ERGO': '15.017863410505514','REAIS': '15.017863410505514'},{'owner': 'Tiago','mediaDesdeUltimoBloco': '396626697.85529095','participacao': '14.980831755349685','ERGO': '10.02105288194729','REAIS': '10.02105288194729'},{'owner': 'TOTAL','mediaDesdeUltimoBloco': '2647561259.1647635','participacao': '99.99999999999999','ERGO': '66.8925','REAIS': ''} ];
+{'owner': 'Mario','mediaDesdeUltimoBloco': '1656537381.3403816','participacao': '62.568425021560245','ERGO': '41.85358370754719','REAIS': '41.85358370754719'},{'owner': 'Tweenky','mediaDesdeUltimoBloco': '594397179.9690909','participacao': '22.450743223090054','ERGO': '15.017863410505514','REAIS': '15.017863410505514'},{'owner': 'Tiago','mediaDesdeUltimoBloco': '396626697.85529095','participacao': '14.980831755349685','ERGO': '10.02105288194729','REAIS': '10.02105288194729'},{'owner': 'TOTAL','mediaDesdeUltimoBloco': '2647561259.1647635','participacao': '99.99999999999999','ERGO': '66.8925','REAIS': '66.8925'} ];
 
 Payments = [ 
 
