@@ -16,7 +16,9 @@ function start() {
    let table=[];
    let keys=Object.keys(tables[k].object[0]);
    table.push('<table><thead><tr>');
-   table.push('<th>'+keys.join('</th><th>')+'</th>');
+   for (i=0;i<keys.length;++i) {
+    '<th>'+nameException(table.push(keys[i]))+'</th>';
+   }
    table.push('</tr></thead><tbody>');
   
    let i=0, j=0
@@ -34,6 +36,14 @@ function start() {
    $('.'+tables[k].tableName).html(table.join(""));
   }
  }
+}
+
+function nameException(name)
+{
+ if (name==="hr") return 'Hashrate Médio';
+ if (name==="timestamp") return 'Data Hora';
+ if (name==="worker") return 'Minerador';
+ return name
 }
 
 function valueException(name,value)
