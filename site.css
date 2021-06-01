@@ -29,7 +29,7 @@ body {
     background-color: #38332e;
 }
 
-.tableDiv {
+table {
     width: 100%;
-    table-layout: fixed;
+    table-layout: auto;
 }
