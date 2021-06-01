@@ -33,3 +33,7 @@ table {
     width: 100%;
     table-layout: auto;
 }
+
+tr.topBorder {
+    border-top: 1px solid #c3c3c3;
+}
