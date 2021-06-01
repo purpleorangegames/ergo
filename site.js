@@ -56,10 +56,12 @@ function valueException(table,name,value)
 {
  if (name==="timestamp") {
   value=moment(value*1000).format('DD/MM/YYYY HH:mm')
-  if (table==="Workers" && value!==lastTimestamp)
-   lastTimestamp=value
-  else
-   value=""
+  if (table==="Workers") {
+   if (value!==lastTimestamp)
+    lastTimestamp=value
+   else
+    value=""
+  }
  }
  else if (name==="hr") {
   let hash=calculateHashVolume(value);
