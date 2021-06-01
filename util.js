@@ -7,7 +7,7 @@ let realFormatter = new Intl.NumberFormat('pt-BR', {
 })
 
 Number.prototype.countDecimals = function () {
-  if (Math.floor(this.valueOf()) === this.valueOf()) return 0
+  //if (Math.floor(this.valueOf()) === this.valueOf()) return 0
   return this.toString().split('.')[0].length || 0
 }
 
