@@ -19,3 +19,12 @@ td, th {
     padding-left: 6px;
     padding-right: 6px;
 }
+
+td.timestamp {
+    color: #f1a418;
+}
+
+body {
+    color: #ffffff;
+    background-color: #38332e;
+}
