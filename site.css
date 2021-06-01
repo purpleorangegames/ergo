@@ -5,3 +5,11 @@
     margin-top: 20px;
 }
 
+.Workers tr > *:nth-child(1), 
+.Workers tr > *:nth-child(4), 
+.Workers tr > *:nth-child(5), 
+.Workers tr > *:nth-child(6), 
+.Workers tr > *:nth-child(8), 
+.Workers tr > *:nth-child(9) {
+    display: none;
+}
