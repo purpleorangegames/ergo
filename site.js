@@ -86,6 +86,9 @@ function valueException(table,name,value)
     break;
    }
  }
+ else if (name==="participacao") {
+  parseFloat((value).toPrecision(1)).toFixed(1)+" %";
+ }
  else if (name==="effort") {
   value=(value*100).toPrecision(2)+" %";
  }
@@ -100,7 +103,7 @@ function valueException(table,name,value)
     value=""
   }
  }
- else if (name==="hr") {
+ else if (name==="hr" || name==="mediaDesdeUltimoBloco") {
   let hash=calculateHashVolume(value);
   value=maximumCharacters(hash.hash,5)+' '+hash.type
  }
