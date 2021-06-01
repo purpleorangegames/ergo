@@ -1,5 +1,6 @@
 
 let lastTimestamp=''
+let useBorder=false
 start()
 
 function start() {
@@ -24,7 +25,12 @@ function start() {
    table.push('</tr></thead><tbody>');
   
    for (i=0;i<tables[k].object.length;++i) {
-    table.push('<tr>');
+    if (useBorder) {
+     table.push('<tr class="topBorder">');
+     useBorder=false;
+    }
+    else
+     table.push('<tr>');
     for (j=0;j<keys.length;++j) {
      table.push('<td'+styleException(keys[j])+'>'
      +valueException(tables[k].tableName,keys[j],tables[k].object[i][keys[j]])
@@ -57,8 +63,10 @@ function valueException(table,name,value)
  if (name==="timestamp") {
   value=moment(value*1000).format('DD/MM/YYYY HH:mm')
   if (table==="Workers") {
-   if (value!==lastTimestamp)
-    lastTimestamp=value
+   if (value!==lastTimestamp) {
+    lastTimestamp=value;
+    useBorder=true;
+   }
    else
     value=""
   }
