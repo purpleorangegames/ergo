@@ -8,7 +8,7 @@ MatureBlocks = [
 
 NextBlockShare = [ 
 
-{'owner': 'Mario','mediaDesdeUltimoBloco': '1679980581.964422','participacao': '62.9671763461505'},{'owner': 'Tiago','mediaDesdeUltimoBloco': '403735069.5943556','participacao': '15.132351883821663'},{'owner': 'Tweenky','mediaDesdeUltimoBloco': '584310262.0204444','participacao': '21.90047177002782'} ];
+{'owner': 'Tweenky','mediaDesdeUltimoBloco': '584310262.0204444','participacao': '21.90047177002782'},{'owner': 'Tiago','mediaDesdeUltimoBloco': '403735069.5943556','participacao': '15.132351883821663'},{'owner': 'Mario','mediaDesdeUltimoBloco': '1679980581.964422','participacao': '62.9671763461505'} ];
 
 Payments = [ 
 
