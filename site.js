@@ -26,7 +26,7 @@ function start() {
     table.push('<tr>');
     for (j=0;j<keys.length;++j) {
      table.push('<td'+styleException(keys[j])+'>'
-     +valueException(keys[j],tables[k].object[i][keys[j]])
+     +valueException(tables[k].tableName,keys[j],tables[k].object[i][keys[j]])
      +'</td>');
     }
     table.push('</tr>');
@@ -51,10 +51,19 @@ function nameException(name)
  return name
 }
 
-function valueException(name,value)
+let lastTimestamp=''
+function valueException(table,name,value)
 {
- if (name==="timestamp" || name==="lastBeat") {
+ if (name==="timestamp") {
   value=moment(value*1000).format('DD/MM/YYYY HH:mm')
+  if (table==="Workers" && value===lastTimestamp)
+   lastTimestamp=value
+  else
+   value=""
+ }
+ else if (name==="hr") {
+  let hash=calculateHashVolume(value);
+  value=hash.hash+' '+hash.type
  }
  return value
 }
