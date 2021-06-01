@@ -25,7 +25,7 @@ function start() {
    for (i=0;i<tables[k].object.length;++i) {
     table.push('<tr>');
     for (j=0;j<keys.length;++j) {
-     table.push('<td>'
+     table.push('<td'+styleException(keys[j])+'>'
      +valueException(keys[j],tables[k].object[i][keys[j]])
      +'</td>');
     }
@@ -36,6 +36,11 @@ function start() {
    $('.'+tables[k].tableName).html(table.join(""));
   }
  }
+}
+
+function styleException(name) {
+ if (name==='timestamp') return ' class="timestamp" ';
+ return '';
 }
 
 function nameException(name)
