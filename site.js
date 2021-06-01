@@ -64,6 +64,12 @@ function nameException(name)
 
 function valueException(table,name,value)
 {
+ if (name==="worker") {
+  let i=0
+  for (i=0;i<WorkerOwner.length;++i)
+   if (value===WorkerOwner[i].worker)
+    value='<span class="'+WorkerOwner[i].owner+'">'+WorkerOwner[i].owner+' - '+WorkerOwner[i].worker+'</span>';
+ }
  if (name==="timestamp") {
   value=moment(value*1000).format('DD/MM/YYYY HH:mm')
   if (table==="Workers") {
