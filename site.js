@@ -23,20 +23,23 @@ function start() {
     table.push('<th>'+nameException(keys[i])+'</th>');
    }
    table.push('</tr></thead><tbody>');
-  
+   
+   let lineTr=''
    for (i=0;i<tables[k].object.length;++i) {
-    if (useBorder) {
-     table.push('<tr class="topBorder">');
-     useBorder=false;
-    }
-    else
-     table.push('<tr>');
+    lineTr=lineTr+('<tr|BORDER|>');
+    
     for (j=0;j<keys.length;++j) {
-     table.push('<td'+styleException(keys[j])+'>'
+     lineTr=lineTr+('<td'+styleException(keys[j])+'>'
      +valueException(tables[k].tableName,keys[j],tables[k].object[i][keys[j]])
      +'</td>');
     }
-    table.push('</tr>');
+    lineTr=lineTr+('</tr>');
+    
+    lineTr.replace('|BORDER|',((useBorder)?' class="topBorder"':''));
+    if (useBorder)
+     useBorder=false;
+    
+    table.push(lineTr);
    }
   
    table.push('</tbody></table>');
