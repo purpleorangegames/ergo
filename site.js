@@ -39,6 +39,8 @@ function start() {
     if (useBorder)
      useBorder=false;
     
+    console.log(lineTr);
+    
     table.push(lineTr);
     lineTr=''
    }
