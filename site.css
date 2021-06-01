@@ -24,10 +24,10 @@ td.timestamp {
     color: #f1a418;
 }
 
-body {
+/*body {
     color: #ffffff;
     background-color: #38332e;
-}
+}*/
 
 table {
     width: 100%;
@@ -36,4 +36,16 @@ table {
 
 tr.topBorder {
     border-top: 1px solid #c3c3c3;
+}
+
+span.Tweenky {
+    color: #49a008;
+}
+
+span.Mario {
+    color: #8a8a8a;
+}
+
+span.Tiago {
+    color: #8900d0;
 }
