@@ -5,6 +5,7 @@ start()
 
 function start() {
  let k=0, tables=[
+ {'tableName':'NextBlockShare','object':NextBlockShare},
  {'tableName':'TotalPerBlock','object':TotalPerBlock},
  {'tableName':'ProportionalReward','object':ProportionalReward},
  {'tableName':'Workers','object':Workers},
@@ -58,8 +59,11 @@ function nameException(name)
 {
  if (name==="hr") return 'Hashrate Médio';
  else if (name==="timestamp") return 'Data Hora';
- else if (name==="worker") return 'Minerador';
+ else if (name==="worker") return 'Rig';
  else if (name==="effort") return 'Esforço';
+ else if (name==="mediaDesdeUltimoBloco") return 'Média Desde Último Bloco';
+ else if (name==="participacao") return 'Participação';
+ else if (name==="owner") return 'Minerador';
  return name
 }
 
@@ -69,7 +73,18 @@ function valueException(table,name,value)
   let i=0
   for (i=0;i<WorkerOwner.length;++i)
    if (value===WorkerOwner[i].worker)
+   {
     value='<span class="'+WorkerOwner[i].owner+'">'+WorkerOwner[i].owner+' - '+WorkerOwner[i].worker+'</span>';
+    break;
+   }
+ }
+ else if (name==="owner") {
+  let i=0
+  for (i=0;i<WorkerOwner.length;++i)
+   if (value===WorkerOwner[i].owner) {
+    value='<span class="'+WorkerOwner[i].owner+'">'+WorkerOwner[i].owner+'</span>';
+    break;
+   }
  }
  else if (name==="effort") {
   value=(value*100).toPrecision(2)+" %";
