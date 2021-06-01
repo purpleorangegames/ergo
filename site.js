@@ -56,7 +56,7 @@ function valueException(table,name,value)
 {
  if (name==="timestamp") {
   value=moment(value*1000).format('DD/MM/YYYY HH:mm')
-  if (table==="Workers" && value===lastTimestamp)
+  if (table==="Workers" && value!==lastTimestamp)
    lastTimestamp=value
   else
    value=""
