@@ -20,7 +20,7 @@ TotalPerBlock = [
 
 WorkerOwner = [ 
 
-{'worker': 'Tweenky','owner': 'Tweenky'},{'worker': 'TiagoDesk1','owner': 'Tiago'},{'worker': 'TiagoDesk2','owner': 'Tiago'},{'worker': 'TiagoDesk3','owner': 'Tiago'},{'worker': 'mariominer','owner': 'Mario'},{'worker': 'MainRig','owner': 'Mario'},{'worker': 'Mario2','owner': 'Mario'} ];
+{'worker': 'Tweenky','owner': 'Tweenky'},{'worker': 'TiagoDesk1','owner': 'Tiago'},{'worker': 'TiagoDesk2','owner': 'Tiago'},{'worker': 'TiagoDesk3','owner': 'Tiago'},{'worker': 'mariominer','owner': 'Mario'},{'worker': 'MainRig','owner': 'Tweenky'},{'worker': 'Mario2','owner': 'Mario'} ];
 
 Workers = [ 
 
