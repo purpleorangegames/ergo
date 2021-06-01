@@ -65,7 +65,7 @@ function valueException(table,name,value)
  }
  else if (name==="hr") {
   let hash=calculateHashVolume(value);
-  value=hash.hash+' '+hash.type
+  value=hash.hash.toFixed(2)+' '+hash.type
  }
  return value
 }
