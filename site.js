@@ -97,7 +97,7 @@ function valueException(table,name,value)
   value=parseFloat((parseFloat(value)).toPrecision(6)).toFixed(1)+" %";
  }
  else if (name==="effort") {
-  value=(value*100).toPrecision(2)+" %";
+  value=(value*100).toFixed(2)+" %";
  }
  else if (name==="timestamp") {
   value=moment(value*1000).format('DD/MM/YYYY HH:mm')
